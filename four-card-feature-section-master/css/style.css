@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: hsl(234, 12%, 34%);
+    font-family: 'Poppins', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+}
+.header{
+    margin-top: 80px;
+    text-align: center;
+}
+p,.deskripsi{
+    color: hsl(229, 6%, 66%)
+}
+.header p{
+    width: 40%;
+    margin: 20px auto 0 auto;
+    font-weight: 200;
+}
+.thin{
+    font-weight: 200;
+}
+.container{
+    width: 80%;
+    margin: 80px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.container > .card{
+    width: 31.5%;
+}
+.fcol{
+    width: 31.5%;
+}
+.fcol .card{
+    margin-bottom: 25px;
+}
+.card{
+    background-color: white;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 250px;
+    box-shadow: -2px 2px 20px hsla(234, 12%, 34%,0.2);
+}
+.card::after{
+    content: '';
+    display: block;
+    height: 4px;
+    
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+.supervisor::after{
+    background: hsl(180, 62%, 55%);
+}
+.team-builder::after{
+    background: hsl(0, 78%, 62%);
+}
+.karma::after{
+    background: hsl(34, 97%, 64%);
+}
+.calculator::after{
+    background: hsl(212, 86%, 64%);
+}
+.judul{
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.deskripsi{
+    font-size: .8em;
+    /* font-weight: 200; */
+}
+.image{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+
+@media (max-width: 1000px){
+    .container{
+        flex-direction: column;
+    }
+    .container > .card{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .container .fcol{
+        width: 100%;
+
+    }
+    h1.thin,h1.bold{
+        font-size: 1.5em;
+    }
+    .header p{
+        width: 90%;
+        font-weight: 400;
+        font-size: 0.9em;
+    }
+}
